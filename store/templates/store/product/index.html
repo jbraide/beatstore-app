@@ -1,0 +1,270 @@
+{% extends 'store/base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- full width layout -->
+<header class="fill">
+  <div class="container">
+    <div class="row padding-15">
+      <div class="col-lg-4">
+        <div class="dummy">
+          <button class="play-button"><span class="fas fa-play-circle"></span></button>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <h4>Song Title</h2>
+        <h3><img src="" alt="."> Producer Name</h3>
+        <div class="margin-top-150">
+          <h5>GENRE</h5>
+          <a href="" class="tag margin-right">{{product.genre}}</a><button class="tag">TRAP</button>
+        </div>
+
+      </div>
+      <div class="col-lg-4">
+
+      <button class="btn tag margin-right"># MUSIC</button><button class="btn tag "># MUSIC</button>
+      <div class="margin-top-200">
+        <div class="row">
+          <div class="col-lg-4">
+            <h5>BPM</h5>
+            <span>100</span>
+          </div>
+          <div class="col-lg-4">
+            <h5>TIME</h5>
+            <span>3:50</span>
+          </div>
+          <div class="col-lg-4">
+            <a href="" class="btn tag"><span class="fa fa-shopping-cart"> </span>ADD TO CART </span></a>
+          </div>
+        </div>
+
+
+      </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+
+<!-- songs list -->
+
+<div class="top-bottom-padding">
+<div class="container">
+  <div class="row">
+    <table class="table">
+
+      <tr>
+        <th></th>
+        <th>TITLE</th>
+        <th>TIME</th>
+        <th>BPM</th>
+        <th>TAGS</th>
+        <th>OPTIONS</th>
+      </tr>
+  {% for product in products %}
+
+      <tr class="clickable-row loadbeat" data-href="/media/{{ product.beat_file }}"  id="" onclick="playSong()">
+        <td><img src="{% if product.image %}{{product.image.url}}{% else %}{% static 'img/default.jpg'%}{% endif %}" alt=""  style="width: 50px; height: 50px;"></td>
+        <td><a href="{% url "track:track" product.slug %}">{{ product.title }}</a></td>
+        <td>{{product.time}}</td>
+        <td>{{product.bpm}}</td>
+        <td><button class="btn tag margin-right">#Kendrick Lamar</button><button class="btn tag">#Hip-Hop</button></td>
+        <td><i class="fa fa-share-alt margin-right"></i><i class="fa fa-download margin-right"></i> <a class="btn tag"><i class="fa fa-cart"></i> ADD</a></td>
+      </tr>
+  {% endfor %}
+    </table>
+
+
+    <a href="" class="btn tag browse-all-center">BROWSE ALL TRACKS </a>
+  </div>
+</div>
+</div>
+
+
+<div class="background">
+<div class="container top-bottom-padding">
+  <div class="row text-center">
+    <h2 class="top-bottom-padding body-color"> LICENSING INFO </h2>
+    <div class="col-lg-3 black">
+      <div class="header-white">
+        <h4>MP3 Lease</h4>
+        <p class="large">$29.99</p>
+        <p>PER UNITS</p>
+        <small>Standard MP3 Lease</small>
+      </div>
+
+
+      <ul class="body-color">
+        <li>Untagged MP3 File</li>
+        <li>Sell Up To 2,500 Tracks</li>
+        <li>Stream up to 100,000 units</li>
+        <li>MJW maintain the Ownership</li>
+        <li>Credit "Prod. By Mr J Wolfgang" </li>
+        <a href="#" class="btn tag-white ">Read Full License</a>
+      </ul>
+
+    </div>
+    <div class="col-lg-3 white">
+      <div class="header-black">
+        <h4>WAV Lease</h4>
+        <p class="large">$49.99</p>
+        <p>PER UNITS</p>
+        <small>Premium WAV Lease</small>
+      </div>
+
+      <ul>
+        <li>Untagged MP3 File</li>
+        <li>Sell Up To 5,000 Tracks</li>
+        <li>Stream up to 500,000 units</li>
+        <li>MJW maintain the Ownership</li>
+        <li>Credit "Prod. By Mr J Wolfgang" </li>
+        <a href="#" class="btn tag">Read Full License</a>
+    </div>
+    <div class="col-lg-3 white">
+      <div class="header-black">
+        <h4>Trackout Lease</h4>
+        <p class="large">$ 99.99</p>
+        <p>PER UNITS</p>
+        <small>Trackout Lease</small>
+      </div>
+
+
+      <ul>
+        <li>Untagged MP3 File + WAV File</li>
+        <li>Sell Up To 10,000 Tracks</li>
+        <li>Stream up to 1,000,000 units</li>
+        <li>MJW maintain the Ownership</li>
+        <li>Credit "Prod. By Mr J Wolfgang" </li>
+        <a href="#" class="btn tag">Read Full License</a>
+    </div>
+    <div class="col-lg-3 white">
+      <div class="header-black">
+        <h4>Unlimited Lease</h4>
+
+        <p class="large">$ 199.99</p>
+        <p>PER UNITS</p>
+        <small>Standard MP3 Lease</small>
+      </div>
+
+
+      <ul>
+        <li><b>Untagged</b> MP3 File</li>
+        <li>Sell Unliimited Tracks</li>
+        <li>Unlimited Streams</li>
+        <li>MJW maintain the Ownership</li>
+        <li>Credit "Prod. By Mr J Wolfgang" </li>
+        <a href="#" class="btn tag">Read Full License</a>
+      </ul>
+    </div>
+  </div>
+</div>
+</div>
+
+
+  <div class="container top-bottom-padding">
+    <div class="row">
+      <div class="col-lg-6">
+        <h3>CONTACT</h3>
+      </div>
+      <div class="col-lg-6">
+        <form>
+  <div class="row">
+    <div class="col-lg-6">
+      <input type="text" class="form-control" placeholder="First name">
+    </div>
+    <div class="col-lg-6">
+      <input type="text" class="form-control" placeholder="Last name">
+    </div>
+    <div class="col-lg-12">
+      <input type="text" class="form-control" placeholder="Subject">
+    </div>
+    <div class="col-lg-12">
+      <textarea name="" class="form-control" rows="8" cols="80"></textarea>
+    </div>
+    <input type="submit" name="Send" class="btn btn-primary">
+  </div>
+</form>
+      </div>
+    </div>
+  </div>
+
+
+
+<footer class="background top-bottom-padding">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-5 body-color">
+        <img src="" alt="image">
+        <p>By purchasing on this website, you agree and are bound to the terms and conditions stated below.</p>
+        <p>All sales are final, no refunds after files have been sent (Unless double payment).</p>
+        <p>&copy; 2018 MJW | All Rights reserved</p>
+        <span><a href="#">TERMS OF USE</a></span>
+        <span> <a href="#">PRIVACY POLICY </a></span>
+      </div>
+      <div class="col-lg-4">
+        <p><a href="">Main</a></p>
+        <p><a href="">Beat Store</a></p>
+        <p><a href="">FAQ</a></p>
+        <p><a href=""></a></p>
+      </div>
+      <div class="col-lg-3">
+        <h4><strong>Social Links</strong></h4>
+        <span class="fab fa-facebook-square"></span>
+        <span class="fab fa-twitter"></span>
+        <span class="fab fa-instagram"></span>
+        <span class="fab fa-youtube"></span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="player white-text">
+  <div id="seekbar">
+    <div id="currenttime">
+      00:00/00:00
+    </div>
+  </div>
+
+  <div id="seek-bar-top-bottom-margin">
+    <div class="container">
+      <div class="row">
+
+          <div class="col-lg-1">
+            <div class="player-img">
+
+            </div>
+          </div>
+
+          <div class="col-lg-2">
+            <h6 id="songTitle"></h6>
+            <h5>Mr J Wolfgang</h6>
+          </div>
+          <div class="col-lg-1">
+            <button class="btn player-btn-group player-span-font player-span-padding-20"><span class="fa fa-share-alt"></span></button>
+          </div>
+
+          <div class="col-lg-4">
+            <button class="btn player-btn-group player-span-font margin-right" onclick="repeat()"><span class="fa fa-retweet"></span></button>
+            <button class="btn player-btn-group player-span-font margin-right" onclick="previous()"><span class="fa fa-step-backward"></span></button>
+            <button class="btn player-btn-group player-span-playbutton margin-right" id="play" onclick="playOrPauseSong()"><span class="fa fa-pause"></span></button>
+            <button class="btn player-btn-group player-span-font margin-right" onclick="next()"><span class="fa fa-step-forward"></span></button>
+            <button class="btn player-btn-group player-span-font margin-right"><span class="fa fa-list-ol"></span></button>
+          </div>
+
+
+          <div class="col-lg-4">
+              <button class="btn player-btn-group player-span-font player-span-padding-20" onclick="decreaseVolume()">-</button>
+              <button class="btn player-btn-group player-span-font player-span-padding-20" id="mute" onclick="mute()"><span class="fa fa-volume-up"></span></button>
+              <button class="btn player-btn-group player-span-font player-span-padding-20" onclick="increaseVolume()">+</button>
+              <button class="btn player-btn-group player-span-font player-span-padding-20"><span class="fa fa-edit"></span></button>
+              <a href="" class="btn tag player-span-font player-span-padding-20"> <span class="fa fa-shopping-cart margin-right"> $ 0</span> </a>
+
+          </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,173 @@
+{% extends 'store/base.html' %}
+{% load static%}
+{% block content %}
+<header class="fill">
+    <div class="container">
+      <div class="row padding-15">
+        <div class="col-lg-4">
+          <div class="dummy">
+            <button class="play-button"><span class="fas fa-play-circle"></span></button>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <h4>{{product.title}}</h2>
+          <h3><img src="" alt="."> Producer Name</h3>
+          <div class="margin-top-150">
+            <h5>GENRE</h5>
+            <button class="tag margin-right">{{ product.genre }}</button><button class="tag">TRAP</button>
+          </div>
+
+        </div>
+        <div class="col-lg-4">
+
+        <button class="btn tag margin-right"># MUSIC</button><button class="btn tag "># MUSIC</button>
+        <div class="margin-top-200">
+          <div class="row">
+            <div class="col-lg-4">
+              <h5>BPM</h5>
+              <span>{{product.bpm}}</span>
+            </div>
+            <div class="col-lg-4">
+              <h5>TIME</h5>
+              <span>{{ product.time }}</span>
+            </div>
+            <div class="col-lg-4">
+              <a href="" class="btn tag"><span class="fa fa-shopping-cart"> </span>ADD TO CART </span></a>
+            </div>
+          </div>
+
+
+        </div>
+        </div>
+      </div>
+    </div>
+    <br>
+  <div class="container">
+    <div class="row">
+    <form >
+      <div class="form-group">
+        <div class="input-group">
+
+            <input type="text" class="form-control" id="exampleInputAmount" placeholder="Write a Comment.">
+            <div class="input-group-addon"><input class="tag" type="submit" placeholder="Send" ></div>
+        </div>
+      </div>
+
+    </form>
+  </div>
+  </div>
+
+</header>
+
+
+<div class="background">
+  <div class="container">
+    <div class="row">
+      <ul class="nav nav-pills">
+        <li role="presentation" class="active"><a href="#">INFO</a></li>
+        <li role="presentation"><a href="#">Comments </a></li>
+        <li role="presentation"><a href="#">Details</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="container text-center top-bottom-padding">
+  <div class="row ">
+    <div class="col-lg-3 background">
+      <h4 class="white-text">MP3 LEASE</h4>
+      <h2 class="body-color">$ 29.99 </h2>
+      <small class="body-color">MP3</small>
+    </div>
+    <div class="col-lg-3 background">
+      <h4 class="h4-text">WAV LEASE</h4>
+      <h2 class="white-text"> $ 49.99 </h2>
+      <small class="white-text">MP3 + WAV </small>
+    </div>
+    <div class="col-lg-3 background">
+      <h4 class="h4-text">TRACKOUT LEASE</h4>
+      <h2 class="white-text">$ 99.99 </h2>
+      <small class="white-text">MP3 + WAV + TRACK STEMS</small>
+    </div>
+    <div class="col-lg-3 background">
+    <h4 class="h4-text">  UNLIMITED LEASE</h4>
+    <h2 class="white-text"> $ 199.99 </h2>
+    <small class="white-text">MP3 + WAV + TRACK STEMS </small>
+    </div>
+  </div>
+</div>
+
+<div class="background">
+  <div class="container top-bottom-padding">
+    <div class="row">
+      <h3>Tags</h3>
+      <div class="col-lg-6">
+        <span>1</span><span> #</span>
+      </div>
+      <div class="col-lg-6">
+        <span>1</span><span> #</span>
+      </div>
+      <div class="col-lg-6">
+        <span>1</span><span> #</span>
+      </div>
+      <div class="col-lg-6">
+        <span>1</span><span> #</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="container top-bottom-padding">
+  <div class="row">
+    <h3>Related Tracks </h3>
+    <table class="table">
+      <tr>
+        <th>image</th>
+        <th>TITLE</th>
+        <th>TIME</th>
+        <th>BPM</th>
+        <th>TAGS</th>
+        <th>OPTIONS</th>
+      </tr>
+
+
+      <tr>
+        <td></td>
+        <td>Hallucinate</td>
+        <td>3:03</td>
+        <td>115</td>
+        <td><button class="btn tag margin-right">#Kendrick Lamar</button><button class="btn tag">#Hip-Hop</button></td>
+        <td><i class="fa fa-share-alt margin-right"></i><i class="fa fa-download margin-right"></i> <a class="btn tag"><i class="fa fa-cart"></i> ADD</a></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>Hallucinate</td>
+        <td>3:03</td>
+        <td>115</td>
+        <td><button class="btn tag margin-right">#Kendrick Lamar</button><button class="btn tag">#Hip-Hop</button></td>
+        <td><i class="fa fa-share-alt margin-right"></i><i class="fa fa-download margin-right"></i> <a class="btn tag"><i class="fa fa-cart"></i> ADD</a></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>Hallucinate</td>
+        <td>3:03</td>
+        <td>115</td>
+        <td><button class="btn tag margin-right">#Kendrick Lamar</button><button class="btn tag">#Hip-Hop</button></td>
+        <td><i class="fa fa-share-alt margin-right"></i><i class="fa fa-download margin-right"></i> <a class="btn tag"><i class="fa fa-cart"></i> ADD</a></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>Hallucinate</td>
+        <td>3:03</td>
+        <td>115</td>
+        <td><button class="btn tag margin-right">#Kendrick Lamar</button><button class="btn tag">#Hip-Hop</button></td>
+        <td><i class="fa fa-share-alt margin-right"></i><i class="fa fa-download margin-right"></i> <a class="btn tag"><i class="fa fa-cart"></i> ADD</a></td>
+      </tr>
+
+    </table>
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,198 @@
+.clickable-row:hover{
+  background-color: #000;
+  color: #999;
+}
+
+ .table > tbody > tr > td{
+  border-top: 0;
+}
+.browse-all-center{
+  margin-left: 40%;
+  margin-right: 40%;
+}
+.btn{
+  border-radius: 0;
+}
+
+.fill{
+  display: table;
+  background-image:  url(/static/img/img3.jpg);
+  background-size: cover;
+  padding: 150px 0;
+  width: 100%;
+  height: 100vh;
+}
+
+.highlight{
+  background-color: #000;
+  height: 70px;
+}
+
+.margin-top-68{
+    margin-top: 68px;
+}
+
+.padding-15 {
+  padding: 15px 0 0 0;
+}
+
+.dummy{
+  width: 300px;
+  height: 300px;
+  background-color: #000;
+}
+
+.center{
+  margin-top: 50%;
+  margin-left: 50%;
+}
+
+
+.top-bottom-padding{
+  padding: 50px 0 50px 0;
+}
+.all-padding{
+  padding: 70px;
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+}
+body {
+  line-height: 250%;
+}
+
+ul{
+  line-height: 350%
+}
+
+
+.background{
+  background-color: #04060f;
+}
+.white{
+  background-color: white;
+}
+.header-black{
+  background-color: #04060f;
+  padding: 20px;
+  color: #c1403d;
+
+}
+.header-white{
+  background-color: white;
+  padding: 20px;
+  color: #04060f;
+}
+.body-color{
+  color: #c1403d;
+}
+.tag-white{
+  border: 1px solid white;
+}
+
+.tag-white:hover{
+  background-color: white;
+  color: black;
+}
+
+.tag{
+  border: 1px solid black;
+}
+
+.tag:hover{
+  background-color: black;
+  color: white;
+}
+
+a{
+  color: black;
+}
+
+.margin-right{
+  margin-right: 10px;
+}
+.margin-top-200{
+  margin-top: 200px;
+}
+.margin-top-150{
+  margin-top: 150px;
+}
+.play-button{
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  border: none;
+  background: none;
+}
+
+
+/* styling for track page et al */
+
+.white-text{
+  color: white;
+}
+.h4-text{
+  color: #c1403d;
+}
+#form1{
+  display: none;
+}
+#form-field{
+  position: absolute;
+  top: 100%;
+  left: 78%;
+  background-color: #000;
+}
+
+
+
+.player{
+  background-color: #333;
+  width: 100%;
+  height: 100px;
+  position: fixed;
+  bottom: 0;
+  display: none;
+}
+
+#seekbar{
+  height: 10px;
+  background-color: #000;
+}
+
+#seek-bar-top-bottom-margin{
+  padding-top: 10px;
+}
+
+
+.player-img{
+  height: 50px;
+  width: 50px;
+  background-color: #eee;
+}
+.player-btn-group{
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.player-span-font{
+  font-size: 20px;
+
+}
+
+.player-span-playbutton{
+  font-size: 40px;
+}
+
+.player-span-padding-20{
+  padding-top: 20px;
+  margin-right: 5px;
+}
+
+.table-img{
+  width: 50px;
+  height: 50px;
+}
