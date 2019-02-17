@@ -15,7 +15,7 @@ $(".clickable-row").click(function(){
 
 // audio player functionality
 
-// var songs = $('.loadbeat').attr('data-href');
+var songs = $('.loadbeat').attr('data-href');
 
 
 
@@ -24,13 +24,13 @@ $(".clickable-row").click(function(){
 //    window.load = beatdata
 //  });
 
-var songs =
-  $(".loadbeat").click(function(){
-   var beatdata = $(this).data("href");
-   //window.onload = beatdata
-   console.log(beatdata) = song
+// var songs =
+//   $(".loadbeat").click(function(){
+//    var beatdata = $(this).data("href");
+//    //window.onload = beatdata
+//    console.log(beatdata) = song
 
- });
+//  });
 
 var songTitle = document.getElementById('songTitle');
 var seekBar = document.getElementById('seekbar');
